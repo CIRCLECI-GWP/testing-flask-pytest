@@ -14,6 +14,7 @@ jobs:
           command: | 
             mkdir test-results
             pytest --junitxml=test-results/junit.xmlworkflows
+            echo ls test-results
       - store_test_results:
           path: test-results
           
