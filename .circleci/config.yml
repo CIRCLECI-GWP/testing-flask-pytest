@@ -13,7 +13,7 @@ jobs:
           name: Run tests
           command: | 
             mkdir test-results
-            circleci tests run --command='pytest --junitxml=test-results/junit.xml' --batch-count=3 --fail-fast --test-results-path="test-results"
+            circleci tests run --command='pytest --junitxml=test-results/junit.xml' --batch-count=3 --fail-fast --test-results-path=test-results --verbose
       - store_test_results:
           path: test-results
           
