@@ -13,7 +13,9 @@ jobs:
           name: Run tests
           command: | 
             mkdir test-results
-            pytest --collect-only | circleci tests run --command='pytest --junitxml=test-results/junit.xml' --verbose
+            pytest --collect-only | circleci tests run --command='pytest --junitxml=test-results/junit.xml' --batch-count=3 --fail-fast --test-results-path=test-results --verbose
+      - store_test_results:
+          path: test-results
           
 workflows:
   sample:
