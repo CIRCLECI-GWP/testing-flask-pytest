@@ -15,6 +15,10 @@ jobs:
             . venv/bin/activate 
             mkdir test-results
             pytest --junitxml=test-results/junit.xmlworkflows
+      - store_test_results:
+          path: test-results
+          
+workflows:
   sample:
     jobs:
       - build-and-test
