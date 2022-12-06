@@ -28,5 +28,5 @@ def test_get_book_by_id():
     print(res)
     assert res['id'] == 1
     assert res['author'] == 'Havard'
-    assert res['title'] == 'CS50'
+    assert res['title'] == 'CS500'
     assert response.status_code == 200
