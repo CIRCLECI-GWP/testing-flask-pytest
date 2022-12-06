@@ -15,7 +15,7 @@ def test_get_all_books():
     res = json.loads(response.data.decode('utf-8')).get("Books")
     assert type(res[0]) is dict
     assert type(res[1]) is dict
-    assert res[0]['author'] == 'Havard'
+    assert res[0]['author'] == 'Test' 
     assert res[1]['author'] == 'Will'
     assert response.status_code == 200
     assert type(res) is list
