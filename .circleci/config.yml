@@ -11,7 +11,7 @@ jobs:
           pkg-manager: pip
       - run:
           name: Run tests
-          command: pytest
+          command: circleci tests run --command='pytest'
 workflows:
   sample:
     jobs:
