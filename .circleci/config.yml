@@ -11,8 +11,12 @@ jobs:
           pkg-manager: pip
       - run:
           name: Run tests
-          command: circleci tests run --command='pytest' --batch-count=3 --fail-fast
-workflows:
+          command: |
+            . venv/bin/activate
+            mkdir test-results
+            pytest --junitxml=test-results/junit.xmlworkflows
+      - store_test_results:
+          path: test-results
   sample:
     jobs:
       - build-and-test
