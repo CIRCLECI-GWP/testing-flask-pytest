@@ -13,7 +13,7 @@ jobs:
           name: Run tests
           command: | 
             mkdir test-results
-            pytest --junitxml=test-results/junit.xml
+            circleci tests run --command='pytest --junitxml=test-results/junit.xml'
       - store_test_results:
           path: test-results
           
