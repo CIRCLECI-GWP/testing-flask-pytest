@@ -15,12 +15,7 @@ jobs:
           command: | 
             mkdir test-results
             pytest --collect-only -q | grep -e "\.py" | 
-            circleci tests run  --command="xargs pytest --junitxml=test-results/junit.xml -v --" 
-            --fail-fast 
-            --batch-count=3 
-            --verbose 
-            --test-results-path="test-results" 
-            --split-by=timings
+            circleci tests run  --command="xargs pytest --junitxml=test-results/junit.xml -v --" --fail-fast --batch-count=3 --verbose --test-results-path="test-results" --split-by=timings
       - store_test_results:
           path: test-results
           
