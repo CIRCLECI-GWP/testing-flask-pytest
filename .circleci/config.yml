@@ -3,6 +3,7 @@ orbs:
   python: circleci/python@2.1.1
 jobs:
   build-and-test:
+    resource_class: small
     docker:
       - image: cimg/python:3.11.0
     parallelism: 3
