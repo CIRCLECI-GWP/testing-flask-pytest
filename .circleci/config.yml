@@ -1,6 +1,10 @@
 version: 2.1
 orbs:
   python: circleci/python@2.1.1
+parameters:
+  rerun-failed:
+    type: boolean
+    default: false
 jobs:
   build-and-test:
     resource_class: small
