@@ -2,13 +2,12 @@ version: 2.1
 orbs:
   python: circleci/python@2.1.1
 
-parameters:
-  rerun-failed:
-    type: boolean
-    default: false
-
 jobs:
   build-and-test:
+    parameters:
+      rerun-failed:
+        type: boolean
+        default: false
     resource_class: small
     docker:
       - image: cimg/python:3.11.0
