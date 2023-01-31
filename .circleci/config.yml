@@ -22,13 +22,17 @@ jobs:
           condition:
              equal: [ true, << pipeline.parameters.rerun-failed >> ]
           steps:
-            - run: echo "true"
-      #- run:
-      #    name: Run tests
-      #    command: | 
-      #      mkdir test-results
-      #      pytest --collect-only -q | grep -e "\.py" | 
-      #      circleci tests run  --command="xargs pytest --junitxml=test-results/junit.xml -v --" --fail-fast --batch-count=3 --verbose --test-results-path="test-results" --split-by=name
+            - run:
+                name: Run tests
+                command: | 
+                  mkdir test-results
+                  pytest --collect-only -q | grep -e "\.py" | 
+                  circleci tests run  --command="xargs pytest --junitxml=test-results/junit.xml -v --" --fail-fast --batch-count=3 --verbose --test-results-path="test-results" --split-by=name
+      - when:
+          condition:
+             equal: [ false, << pipeline.parameters.rerun-failed >> ]
+          steps:
+            - run: echo "false"
       - store_test_results:
             path: test-results
           
