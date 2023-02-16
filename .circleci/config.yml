@@ -13,7 +13,6 @@ jobs:
     resource_class: small
     docker:
       - image: cimg/python:3.11.0
-    parallelism: 3
     steps:
       - checkout
       - python/install-packages:
@@ -31,6 +30,7 @@ jobs:
       - when:
           condition:
              equal: [ false, << pipeline.parameters.rerun-failed >> ]
+          parallelism: 3
           steps:
             - run: echo "false"
       - store_test_results:
