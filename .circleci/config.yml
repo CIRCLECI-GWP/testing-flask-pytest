@@ -21,10 +21,8 @@ jobs:
           name: Run tests
           command: | 
                 mkdir test-results
-                $(circleci tests glob "**/test_*.py") | circleci tests run \
-                --command="xargs pytest -o junit_family=legacy --junitxml=test-results/junit.xml -v --" \
-                --split-by=timings \
-                --verbose
+                TEST_FILES = $(circleci tests glob "**/test_*.py")
+                $TEST_FILES | circleci tests run --command="xargs pytest -o junit_family=legacy --junitxml=test-results/junit.xml -v --" --verbose
       - store_test_results:
             path: test-results
           
