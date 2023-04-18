@@ -9,7 +9,7 @@ parameters:
 
 jobs:
   build-and-test:
-    parallelism: 3
+    parallelism: 4
     resource_class: small
     docker:
       - image: cimg/python:3.11.0
