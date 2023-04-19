@@ -1,6 +1,6 @@
 # TESTING FLASK FRAMEWORK WITH PYTEST
 
-> Following a CircleCI tutorial? This default branch is the start point. Find the end point in the [main branch][main-branch].
+> Following a CircleCI tutorial? This branch is the start point. Find the end point in the [main branch][main-branch].
 
 The repository contains a RESTful API built with Flask for retrieving books from a list object defined in the API. You can use the following endpoints:
 
@@ -39,7 +39,7 @@ Join a team of freelance writers and write about your favorite technology topics
 
 Reviewers: [Ron Powell][ron], [Stanley Ndagi][stan], [Amos Omondi][amos], and [Oluyemi][yemi]
 
-[main-branch]: https://github.com/mwaz/testing-flask-framework-with-pytest/tree/main
+[main-branch]: https://github.com/CIRCLECI-GWP/testing-flask-pytest/tree/main
 [blog]: https://circleci.com/blog/testing-flask-framework-with-pytest/
 [author]: https://github.com/mwaz
 [gwp-program]: https://circle.ci/3ahQxfu
