@@ -1,14 +1,14 @@
-from flask import Flask, jsonify, abort, make_response, request
+from flask import Flask, jsonify, abort, make_response
 
 app = Flask(__name__)
 
-#an a array that will hodl for books.
+# An array that will hold books
 books = [
     {
         "id": 1,
         "title": "CS50",
         "description": "Intro to CS and art of programming!",
-        "author": "Havard",
+        "author": "Harvard",
         "borrowed": False
     },
     {
@@ -20,12 +20,12 @@ books = [
     }
 ]
 
-    
+
 @app.route("/")
 def index():
     return "Testing, Flask!"
 
-    
+
 # get and jsonify the data
 @app.route("/bookapi/books")
 def get_books():
@@ -45,7 +45,7 @@ def get_by_id(book_id):
 #error handling
 @app.errorhandler(404)
 def not_found(error):
-    return make_response(jsonify({"error": "not found!"}), 404)
+    return make_response(jsonify({"error": "Not found!"}), 404)
 
 @app.errorhandler(400)
 def not_found(error):
