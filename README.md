@@ -2,6 +2,10 @@
 
 > Following a CircleCI tutorial? This branch is the start point. Find the end point in the [main branch][main-branch].
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/CIRCLECI-GWP/testing-flask-pytest/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/CIRCLECI-GWP/testing-flask-pytest/tree/main)
+
+<p align="center"><img src="https://avatars3.githubusercontent.com/u/59034516"></p>
+
 The repository contains a RESTful API built with Flask for retrieving books from a list object defined in the API. You can use the following endpoints:
 
 `[GET] /bookapi/books/:id` - Fetching a single book by its id.
