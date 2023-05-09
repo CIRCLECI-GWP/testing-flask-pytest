@@ -25,7 +25,8 @@ jobs:
               #  pytest -o junit_family=legacy --junitxml=test-results/junit.xml $TEST_FILES
               pytest --collect-only -q | grep -e "\.py" | circleci tests run --command="xargs pytest -o junit_family=legacy --junitxml=test-results/junit.xml" \
               --verbose \
-              --split-by=timings
+              --split-by=timings \
+              --test-selector=classname \
       - store_test_results:
             path: test-results
           
