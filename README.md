@@ -1,4 +1,4 @@
-# TESTING FLASK FRAMEWORK WITH PYTEST
+# TESTING FLASK FRAMEWORK WITH PYTES
 
 [![CircleCI](https://circleci.com/gh/CIRCLECI-GWP/testing-flask-pytest.svg?style=svg)](https://circleci.com/gh/CIRCLECI-GWP/testing-flask-pytest)
 
