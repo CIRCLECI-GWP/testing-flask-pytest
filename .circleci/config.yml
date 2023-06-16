@@ -31,8 +31,15 @@ jobs:
           command: pytest -o junit_family=legacy --junitxml=test-results/junit.xml
       - store_test_results:
             path: test-results
+  test-gpu:
+      machine:
+        image: ubuntu-2004-cuda-11.4:202110-01
+      resource_class: gpu.nvidia.small
+      steps:
+        - run: nvidia-smi
           
 workflows:
   sample:
     jobs:
-      - build-and-test
+      #- build-and-test
+      - test-gpu
